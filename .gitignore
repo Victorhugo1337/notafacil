@@ -1,0 +1,14 @@
+# Ambiente virtual
+.venv/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Banco de dados gerado (cada um cria o seu a partir do schema)
+*.db
+
+# Saídas do pytest e da cobertura
+.pytest_cache/
+.coverage
+htmlcov/
