@@ -7,6 +7,7 @@ __pycache__/
 
 # Banco de dados gerado (cada um cria o seu a partir do schema)
 *.db
+instance/
 
 # Saídas do pytest e da cobertura
 .pytest_cache/
