@@ -74,3 +74,5 @@ POST /alunos
 | `tests/integration/test_api.py` | Testes de integração (API + banco) |
 | `tests/conftest.py` | Fixtures: aplicação de teste e banco temporário |
 | `.github/workflows/testes.yml` | Pipeline de testes (GitHub Actions) |
+| `docs/DEFEITOS.md` | Registro de defeitos (DEF-01) |
+| `docs/evidencias/` | Saídas dos testes antes e depois da correção e da regressão |

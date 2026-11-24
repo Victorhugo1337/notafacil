@@ -1,0 +1,44 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.2.0, pluggy-1.7.0 -- /home/notafacil/venvnf/bin/python3
+rootdir: /home/notafacil/mnt/NotaFacil/NotaFacil
+configfile: pytest.ini
+plugins: cov-7.1.0
+collecting ... collected 1 item
+
+tests/integration/test_api.py::test_ct12_cadastrar_aluno_valido ERROR    [100%]
+
+==================================== ERRORS ====================================
+______________ ERROR at setup of test_ct12_cadastrar_aluno_valido ______________
+
+tmp_path = PosixPath('/tmp/pytest-of-notafacil/pytest-1/test_ct12_cadastrar_aluno_vali0')
+
+    @pytest.fixture
+    def app(tmp_path):
+        """Aplicação de teste apontando para um banco SQLite temporário e vazio.
+    
+        tmp_path é uma pasta nova criada pelo pytest para cada teste e apagada
+        depois, então um teste nunca enxerga os dados de outro (risco R6).
+        """
+        caminho_banco = tmp_path / "teste.db"
+>       return create_app({"TESTING": True, "DATABASE": str(caminho_banco)})
+
+tests/conftest.py:16: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+test_confg = {'TESTING': True, 'DATABASE': '/tmp/pytest-of-notafacil/pytest-1/test_ct12_cadastrar_aluno_vali0/teste.db'}
+
+    def create_app(test_confg=None):
+        app = Flask(__name__)
+    
+        app.config.from_mapping(
+            DATABASE=os.path.join(app.instance_path, "notafacil.db")
+        )
+    
+        if test_confg is not None:
+>           app.config.update(test_config)
+E           NameError: name 'test_config' is not defined
+
+app/__init__.py:12: NameError
+=========================== short test summary info ============================
+ERROR tests/integration/test_api.py::test_ct12_cadastrar_aluno_valido - NameE...
+=============================== 1 error in 0.32s ===============================

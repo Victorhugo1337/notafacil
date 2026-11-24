@@ -1,0 +1,73 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.2.0, pluggy-1.7.0 -- /home/notafacil/venvnf/bin/python3
+rootdir: /home/notafacil/mnt/NotaFacil/NotaFacil
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-7.1.0
+collecting ... collected 52 items
+
+tests/integration/test_api.py::test_ct12_cadastrar_aluno_valido PASSED   [  1%]
+tests/integration/test_api.py::test_ct13_impedir_ra_duplicado PASSED     [  3%]
+tests/integration/test_api.py::test_ct14_rejeitar_cadastro_invalido[a-ra-12-digitos] PASSED [  5%]
+tests/integration/test_api.py::test_ct14_rejeitar_cadastro_invalido[b-ra-com-letra] PASSED [  7%]
+tests/integration/test_api.py::test_ct14_rejeitar_cadastro_invalido[c-nome-2-caracteres] PASSED [  9%]
+tests/integration/test_api.py::test_ct14_rejeitar_cadastro_invalido[d-sem-campo-nome] PASSED [ 11%]
+tests/unit/test_regras.py::test_ct01_calcular_media[7.0-8.0-7.5] PASSED  [ 13%]
+tests/unit/test_regras.py::test_ct01_calcular_media[0.0-0.0-0.0] PASSED  [ 15%]
+tests/unit/test_regras.py::test_ct01_calcular_media[10.0-10.0-10.0] PASSED [ 17%]
+tests/unit/test_regras.py::test_ct01_calcular_media[5.9-6.0-5.95] PASSED [ 19%]
+tests/unit/test_regras.py::test_ct02_nota_limite_inferior_valida[0.0] PASSED [ 21%]
+tests/unit/test_regras.py::test_ct02_nota_limite_inferior_valida[0.1] PASSED [ 23%]
+tests/unit/test_regras.py::test_ct02_nota_abaixo_do_limite_inferior PASSED [ 25%]
+tests/unit/test_regras.py::test_ct03_nota_limite_superior_valida[9.9] PASSED [ 26%]
+tests/unit/test_regras.py::test_ct03_nota_limite_superior_valida[10.0] PASSED [ 28%]
+tests/unit/test_regras.py::test_ct03_nota_acima_do_limite_superior PASSED [ 30%]
+tests/unit/test_regras.py::test_ct04_nota_nao_numerica[CI3-texto] PASSED [ 32%]
+tests/unit/test_regras.py::test_ct04_nota_nao_numerica[CI4-vazio] PASSED [ 34%]
+tests/unit/test_regras.py::test_ct04_nota_nao_numerica[CI4-None] PASSED  [ 36%]
+tests/unit/test_regras.py::test_ct04_nota_com_mais_de_uma_casa_decimal PASSED [ 38%]
+tests/unit/test_regras.py::test_ct04_nota_valida_de_controle PASSED      [ 40%]
+tests/unit/test_regras.py::test_ct05_frequencia_valida[0.0] PASSED       [ 42%]
+tests/unit/test_regras.py::test_ct05_frequencia_valida[0.1] PASSED       [ 44%]
+tests/unit/test_regras.py::test_ct05_frequencia_valida[99.9] PASSED      [ 46%]
+tests/unit/test_regras.py::test_ct05_frequencia_valida[100.0] PASSED     [ 48%]
+tests/unit/test_regras.py::test_ct05_frequencia_fora_da_faixa[-0.1] PASSED [ 50%]
+tests/unit/test_regras.py::test_ct05_frequencia_fora_da_faixa[100.1] PASSED [ 51%]
+tests/unit/test_regras.py::test_ct05_frequencia_nao_numerica PASSED      [ 53%]
+tests/unit/test_regras.py::test_ct06_aprovado[6.0-75.0] PASSED           [ 55%]
+tests/unit/test_regras.py::test_ct06_aprovado[6.05-75.1] PASSED          [ 57%]
+tests/unit/test_regras.py::test_ct06_aprovado[10.0-100.0] PASSED         [ 59%]
+tests/unit/test_regras.py::test_ct07_reprovado_por_nota[5.95-75.0] PASSED [ 61%]
+tests/unit/test_regras.py::test_ct07_reprovado_por_nota[5.95-100.0] PASSED [ 63%]
+tests/unit/test_regras.py::test_ct07_reprovado_por_nota[0.0-80.0] PASSED [ 65%]
+tests/unit/test_regras.py::test_ct08_reprovado_por_falta[6.0-74.9] PASSED [ 67%]
+tests/unit/test_regras.py::test_ct08_reprovado_por_falta[10.0-74.9] PASSED [ 69%]
+tests/unit/test_regras.py::test_ct08_reprovado_por_falta[4.0-50.0] PASSED [ 71%]
+tests/unit/test_regras.py::test_ct08_reprovado_por_falta[10.0-0.0] PASSED [ 73%]
+tests/unit/test_regras.py::test_ct09_pendente[None-None] PASSED          [ 75%]
+tests/unit/test_regras.py::test_ct09_pendente[None-90.0] PASSED          [ 76%]
+tests/unit/test_regras.py::test_ct10_ra_valido PASSED                    [ 78%]
+tests/unit/test_regras.py::test_ct10_ra_invalido[CI9-12-digitos] PASSED  [ 80%]
+tests/unit/test_regras.py::test_ct10_ra_invalido[CI10-14-digitos] PASSED [ 82%]
+tests/unit/test_regras.py::test_ct10_ra_invalido[CI11-com-letra] PASSED  [ 84%]
+tests/unit/test_regras.py::test_ct10_ra_invalido[CI12-vazio] PASSED      [ 86%]
+tests/unit/test_regras.py::test_ct11_nome_valido[3-caracteres] PASSED    [ 88%]
+tests/unit/test_regras.py::test_ct11_nome_valido[100-caracteres] PASSED  [ 90%]
+tests/unit/test_regras.py::test_ct11_nome_com_espacos_nas_extremidades PASSED [ 92%]
+tests/unit/test_regras.py::test_ct11_nome_invalido[CI14-2-caracteres] PASSED [ 94%]
+tests/unit/test_regras.py::test_ct11_nome_invalido[CI15-101-caracteres] PASSED [ 96%]
+tests/unit/test_regras.py::test_ct11_nome_invalido[CI16-vazio] PASSED    [ 98%]
+tests/unit/test_regras.py::test_ct11_nome_invalido[CI16-somente-espacos] PASSED [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.10.12-final-0 _______________
+
+Name              Stmts   Miss  Cover   Missing
+-----------------------------------------------
+app/__init__.py      13      0   100%
+app/db.py            22      6    73%   25-33
+app/regras.py        55      3    95%   30, 61, 91
+app/rotas.py         23      0   100%
+-----------------------------------------------
+TOTAL               113      9    92%
+============================== 52 passed in 2.25s ==============================

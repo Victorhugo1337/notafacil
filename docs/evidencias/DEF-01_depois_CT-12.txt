@@ -1,0 +1,10 @@
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-9.2.0, pluggy-1.7.0 -- /home/notafacil/venvnf/bin/python3
+rootdir: /home/notafacil/mnt/NotaFacil/NotaFacil
+configfile: pytest.ini
+plugins: cov-7.1.0
+collecting ... collected 1 item
+
+tests/integration/test_api.py::test_ct12_cadastrar_aluno_valido PASSED   [100%]
+
+============================== 1 passed in 0.63s ===============================
